@@ -1,106 +1,238 @@
-# STOOT – Privacy Policy
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="STOOT privacy policy: local game progress, Bluetooth multiplayer, and optional Google AdMob rewarded ads.">
+  <title>STOOT — Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --page: #07111f;
+      --panel: rgba(13, 29, 49, .92);
+      --panel-soft: rgba(20, 42, 66, .72);
+      --ink: #eaf4ff;
+      --muted: #adc0d4;
+      --line: rgba(145, 190, 224, .18);
+      --cyan: #83e8ff;
+      --blue: #52aeea;
+      --gold: #ffd78a;
+      --shadow: 0 24px 70px rgba(0, 0, 0, .35);
+    }
 
-**Developer:** Wallnight  
-**Contact Email:** waridosan51@gmail.com  
-**Last Updated:** November 23, 2026
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-width: 320px;
+      background:
+        radial-gradient(ellipse at 78% 5%, rgba(27, 107, 148, .22), transparent 38rem),
+        radial-gradient(ellipse at 5% 35%, rgba(68, 74, 156, .15), transparent 34rem),
+        var(--page);
+      color: var(--ink);
+      font: 16px/1.72 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: .005em;
+    }
 
-## 1. Introduction
+    a { color: var(--cyan); text-underline-offset: .2em; }
+    a:hover { color: #c7f7ff; }
+    a:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; border-radius: 3px; }
 
-Welcome to STOOT, a space-combat game developed by Wallnight.
+    .shell { width: min(100% - 32px, 940px); margin-inline: auto; }
+    .hero { padding: clamp(42px, 9vw, 88px) 0 34px; }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--cyan);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .19em;
+      text-transform: uppercase;
+    }
+    .brand-mark {
+      display: grid;
+      width: 34px;
+      aspect-ratio: 1;
+      place-items: center;
+      border: 1px solid rgba(131, 232, 255, .58);
+      border-radius: 10px;
+      background: linear-gradient(145deg, rgba(68, 178, 222, .28), rgba(28, 70, 124, .3));
+      box-shadow: 0 0 24px rgba(79, 209, 255, .18);
+      font-size: 1rem;
+      letter-spacing: 0;
+    }
+    h1 {
+      max-width: 760px;
+      margin: 22px 0 12px;
+      font-size: clamp(2.3rem, 8vw, 4.5rem);
+      line-height: 1.04;
+      letter-spacing: -.055em;
+    }
+    h1 span { color: var(--cyan); }
+    .intro { max-width: 680px; margin: 0; color: var(--muted); font-size: clamp(1rem, 2.4vw, 1.15rem); }
 
-Your privacy is important to us. This Privacy Policy explains what information is handled when you use STOOT, how it is used, and what third-party services may collect.
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 25px;
+    }
+    .chip {
+      padding: 7px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(13, 29, 49, .58);
+      color: #d6e6f6;
+      font-size: .86rem;
+    }
 
-## 2. Information Stored on Your Device
+    .layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 22px; align-items: start; padding-bottom: 72px; }
+    nav, article, .contact-card { border: 1px solid var(--line); background: var(--panel); box-shadow: var(--shadow); }
+    nav { position: sticky; top: 18px; padding: 17px; border-radius: 17px; }
+    nav strong { display: block; margin: 0 0 9px; color: var(--muted); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; }
+    nav a { display: block; padding: 6px 2px; color: #d5e7f7; font-size: .86rem; text-decoration: none; }
+    nav a:hover { color: var(--cyan); }
+    article { overflow: hidden; border-radius: 20px; }
+    section { padding: clamp(22px, 5vw, 36px); border-bottom: 1px solid var(--line); scroll-margin-top: 20px; }
+    section:last-child { border-bottom: 0; }
+    h2 { display: flex; align-items: center; gap: 11px; margin: 0 0 15px; font-size: clamp(1.24rem, 4vw, 1.58rem); line-height: 1.25; letter-spacing: -.025em; }
+    .num { display: inline-grid; flex: 0 0 30px; width: 30px; aspect-ratio: 1; place-items: center; border: 1px solid rgba(131, 232, 255, .36); border-radius: 9px; color: var(--cyan); font-size: .82rem; }
+    p { margin: 0 0 13px; color: #d4e2ef; }
+    p:last-child { margin-bottom: 0; }
+    ul { margin: 10px 0 16px; padding-left: 1.25rem; color: #d4e2ef; }
+    li { padding-left: 4px; margin: 5px 0; }
+    li::marker { color: var(--cyan); }
+    .note { margin-top: 17px; padding: 14px 16px; border-left: 3px solid var(--blue); border-radius: 0 10px 10px 0; background: var(--panel-soft); color: #d7e8f8; }
+    .note strong { color: var(--cyan); }
+    .gold { color: var(--gold); }
+    .contact-card { margin-top: 22px; padding: clamp(22px, 5vw, 32px); border-radius: 18px; }
+    .contact-card h2 { margin-bottom: 10px; }
+    .contact-line { display: flex; flex-wrap: wrap; gap: 7px 18px; color: var(--muted); }
+    footer { padding: 0 0 36px; color: #8499ad; font-size: .83rem; text-align: center; }
 
-STOOT stores game progress locally on your device, including:
+    @media (max-width: 760px) {
+      .layout { grid-template-columns: 1fr; gap: 14px; }
+      nav { position: static; display: flex; flex-wrap: wrap; gap: 3px 15px; padding: 12px 15px; }
+      nav strong { flex: 0 0 100%; margin-bottom: 3px; }
+      nav a { padding: 3px 0; }
+    }
+    @media (max-width: 420px) {
+      .shell { width: min(100% - 22px, 940px); }
+      .hero { padding-top: 36px; }
+      section { padding: 22px 18px; }
+      nav { gap: 1px 12px; }
+      nav a { font-size: .8rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero shell">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">✦</span> Wallnight · STOOT</div>
+    <h1>Privacy <span>Policy</span></h1>
+    <p class="intro">This policy explains what information the Android version of STOOT stores or shares when you play, connect with a friend, or choose to watch a rewarded ad.</p>
+    <div class="meta" aria-label="Policy details">
+      <span class="chip">Developer: Wallnight</span>
+      <span class="chip">Last updated: November 23, 2026</span>
+    </div>
+  </header>
 
-- Coins and scores.
-- Player levels and progression.
-- Unlocked ships and upgrades.
-- Game settings and other gameplay data.
+  <main class="shell layout">
+    <nav aria-label="Policy sections">
+      <strong>On this page</strong>
+      <a href="#about">Introduction</a>
+      <a href="#local-data">On-device data</a>
+      <a href="#bluetooth">Bluetooth multiplayer</a>
+      <a href="#ads">Ads and consent</a>
+      <a href="#sharing">Data sharing</a>
+      <a href="#retention">Retention and deletion</a>
+      <a href="#children">Children and audience</a>
+      <a href="#changes">Policy changes</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-This information is stored locally using Android's private application storage. STOOT does not require you to create an account.
+    <article>
+      <section id="about">
+        <h2><span class="num">01</span> Introduction</h2>
+        <p>STOOT is a space-combat game developed by Wallnight. This policy describes information handled by the Android game and the Google advertising technology it uses.</p>
+        <p>STOOT does not require an account. It does not operate a game server or cloud-save service.</p>
+      </section>
 
-## 3. Bluetooth Multiplayer
+      <section id="local-data">
+        <h2><span class="num">02</span> Information stored on your device</h2>
+        <p>STOOT stores game progress in Android private app storage using SharedPreferences. The saved progress includes:</p>
+        <ul>
+          <li>Coins, level, experience, and best score.</li>
+          <li>Current and maximum health.</li>
+          <li>Selected and unlocked ships.</li>
+          <li>World coordinates, ore, cells, and laser-resistance upgrades.</li>
+        </ul>
+        <p>The app also stores a small permission-request flag so it can avoid repeatedly prompting for Bluetooth permissions.</p>
+        <p>This information is used to save and restore local game progress and permission-prompt state. STOOT does not save separate game-settings preferences in its current Android implementation.</p>
+      </section>
 
-STOOT offers Bluetooth multiplayer functionality.
+      <section id="bluetooth">
+        <h2><span class="num">03</span> Bluetooth multiplayer</h2>
+        <p>If you choose Bluetooth Play, STOOT discovers nearby devices and connects directly to another player's phone. The game exchanges multiplayer information such as game mode, ship selection, readiness, control input, and game state. The connection message includes the Android device model name.</p>
+        <p>Bluetooth device information is used in memory to list and connect to devices. Multiplayer information is sent directly to the connected player; it is not sent to a STOOT-operated server.</p>
+        <p>STOOT requests Bluetooth permissions for this feature. On Android 10 and 11, Android requires location permission for Bluetooth discovery. STOOT does not read GPS coordinates or use that permission to track your location.</p>
+      </section>
 
-When you use this feature, the game exchanges necessary gameplay information directly between connected devices. This may include:
+      <section id="ads">
+        <h2><span class="num">04</span> Advertising and Google AdMob</h2>
+        <p>STOOT offers an optional Google Mobile Ads rewarded video after a solo run ends. Watching is your choice; you can retry or return to the menu without watching. Completing the ad grants one hit point and a temporary 2.5-second shield. STOOT does not show banner or interstitial ads during gameplay.</p>
+        <p>The Google Mobile Ads SDK may automatically collect and share with Google data such as:</p>
+        <ul>
+          <li>IP address, which may be used to estimate general location.</li>
+          <li>App and ad interactions, including app launches, taps, and video views.</li>
+          <li>Diagnostic and performance information, such as launch time, hang rate, and energy use.</li>
+          <li>Device and account identifiers, including Android Advertising ID and App Set ID and, where applicable, other account-related identifiers.</li>
+        </ul>
+        <p>Google identifies advertising, analytics, and fraud prevention as purposes for this SDK data and states that it is encrypted in transit using TLS. Advertising ID collection is optional and can be restricted through Android settings or supported SDK privacy features. Google’s and ad partners’ own privacy terms govern their handling and retention of advertising data.</p>
+        <p>STOOT uses Google’s User Messaging Platform (UMP) to refresh consent information and show consent forms when required. Whether an ad can be requested depends on UMP’s consent state and the privacy choices configured for this app. When UMP requires it, the in-game Privacy menu provides a way to revisit privacy choices. Ads may be unavailable.</p>
+        <p>Debug versions use Google test ads; release versions use STOOT’s AdMob ad placement.</p>
+        <div class="note"><strong>Learn more:</strong> <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Privacy Policy</a> · <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure" rel="noopener noreferrer">Google Mobile Ads data disclosure</a></div>
+      </section>
 
-- Game mode and ship selection.
-- Player readiness and control inputs.
-- Multiplayer game state.
-- Device model information.
+      <section id="sharing">
+        <h2><span class="num">05</span> Data sharing and services</h2>
+        <p>STOOT does not have accounts, cloud saves, or its own game server. Game progress stays in the app’s private storage. Multiplayer data is exchanged directly with the Bluetooth player you connect to.</p>
+        <p>The Google Mobile Ads SDK communicates with Google and may share the advertising-related data described above with Google and parties involved in ad delivery, measurement, and fraud prevention.</p>
+        <p>The current Android source does not include a separate analytics or crash-reporting service.</p>
+      </section>
 
-Bluetooth permissions are requested to enable multiplayer functionality.
+      <section id="retention">
+        <h2><span class="num">06</span> Data security, retention, and deletion</h2>
+        <p>STOOT’s saved progress is kept in Android private app storage on your device. STOOT does not save Bluetooth session details as a player profile. Google handles advertising-related data under its own applicable privacy and retention practices.</p>
+        <p class="gold"><strong>To delete STOOT’s locally saved data:</strong> open Android Settings, find STOOT under Apps, open Storage, and choose Clear storage or Clear data. Uninstalling STOOT also removes its local app data. These actions may permanently remove your saved progress.</p>
+        <p>STOOT has no in-game account or data-deletion feature because it does not operate user accounts or store game progress on a STOOT server.</p>
+      </section>
 
-STOOT does not use these permissions to track your GPS location.
+      <section id="children">
+        <h2><span class="num">07</span> Children and audience</h2>
+        <p>STOOT does not ask for a player’s age. The developer declares the intended age groups in Google Play Console. If children are included in the target audience, additional Google Play Families and child-directed advertising requirements may apply. Advertising and audience settings must be configured for the declared audience.</p>
+        <p>If you have a privacy concern, contact Wallnight using the address below.</p>
+      </section>
 
-## 4. Advertising and Google AdMob
+      <section id="changes">
+        <h2><span class="num">08</span> Changes to this policy</h2>
+        <p>This policy may be updated when STOOT’s features, services, or applicable requirements change. The latest version and its update date will be published on this page.</p>
+      </section>
+    </article>
 
-STOOT uses Google Mobile Ads SDK to provide optional rewarded advertisements.
+    <section class="contact-card" id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading"><span class="num">09</span> Contact</h2>
+      <p>For questions or concerns about this policy or STOOT’s privacy practices, contact:</p>
+      <div class="contact-line"><strong>Wallnight</strong><a href="mailto:waridosan51@gmail.com">waridosan51@gmail.com</a></div>
+    </section>
+  </main>
 
-Google and its advertising partners may collect certain information through the advertising SDK, including:
-
-- IP address.
-- Advertising ID and other device identifiers.
-- App and advertising interactions.
-- Diagnostic and performance information.
-
-This information may be used for advertising, analytics, fraud prevention, and service functionality.
-
-Advertising and consent management are handled through Google's advertising and consent technologies.
-
-For more information, please review:
-
-[Google Privacy Policy](https://policies.google.com/privacy)
-
-[Google Mobile Ads Privacy Information](https://developers.google.com/admob/android/privacy/play-data-disclosure)
-
-## 5. Advertising Choices and Consent
-
-STOOT uses Google's User Messaging Platform (UMP) to manage applicable privacy consent requirements.
-
-Depending on your location and applicable regulations, you may be presented with a consent form or privacy choices.
-
-Rewarded advertisements are optional. You can continue playing without watching an advertisement.
-
-## 6. Data Sharing
-
-STOOT does not operate its own game account system or game server.
-
-Game progress is stored locally on your device.
-
-Multiplayer gameplay information is exchanged directly with the connected Bluetooth player.
-
-Information collected by Google Mobile Ads SDK may be processed or shared by Google and its advertising partners as described in Google's privacy documentation.
-
-## 7. Data Security and Retention
-
-Game progress remains stored on your device until it is deleted through available game or device controls.
-
-Information handled by Google Mobile Ads is subject to Google's applicable data retention and privacy practices.
-
-We do not operate a separate STOOT account database.
-
-## 8. Children's Privacy
-
-STOOT is not specifically designed to collect personal information from children.
-
-Advertising and audience settings are subject to the applicable Google Play and advertising policies.
-
-If you have concerns about children's privacy, please contact us.
-
-## 9. Changes to This Policy
-
-We may update this Privacy Policy when STOOT's features, services, or applicable requirements change.
-
-The latest version will be published on this page, with its updated date.
-
-## 10. Contact Us
-
-If you have questions or concerns about this Privacy Policy or STOOT's privacy practices, contact:
-
-**Developer:** Wallnight  
-**Email:** waridosan51@gmail.com
-
+  <footer class="shell">© 2026 Wallnight · STOOT Privacy Policy</footer>
+</body>
+</html>
